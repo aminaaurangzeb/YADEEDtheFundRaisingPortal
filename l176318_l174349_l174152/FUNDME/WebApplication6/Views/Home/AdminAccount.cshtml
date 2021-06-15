@@ -1,0 +1,113 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="~/js/checkfields.js">
+    </script>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddEvent</title>
+    <img src="~/Content/2l.png">
+    <link rel="stylesheet" type="text/css" href="~/Content/StyleSheet.css"/>
+</head>
+<body>
+
+    <!-- inline CSS on div tag;  external CSS on text boxes;-->
+
+    <heading3> Welcome Admin to your account at YADEED </heading3>
+    <br />
+    <br />
+    <br />
+    <br />
+    <fieldset class="outerrec1">
+
+        <div class="inputlabel" id="f">
+
+            <br />
+
+
+            <th>
+                <a href="../../Home/addEvent"> Add an Event </a>
+            </th>
+
+            <br />
+            <br />
+
+            <th>
+                <a href="../../Home/addCase"> Add a Case</a>
+            </th>
+
+            <br />
+            <br />
+
+            <th>
+                <a href="../../Home/removeCase"> Remove a Case</a>
+            </th>
+
+            <br />
+            <br />
+
+            <th>
+                <a href="../../Home/removeEvent"> Remove an Event</a>
+            </th>
+            <br />
+            <br />
+            <th>
+                <a href="../../Home/removeflaggedCase"> Remove a Flagged Case</a>
+            </th>
+            <br />
+            <br />
+
+        </div>
+    </fieldset>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <fieldset class="adminsignup">
+
+        <div class="inputlabel" id="f">
+
+
+            <th>
+                <a href="../../Home/adminSignup"> Add another fellow Admin </a>
+            </th>
+            <th>
+                <a href="../../Home/deleteUser"> Remove a User </a>
+            </th>
+
+        </div>
+    </fieldset>
+
+
+    <form method="post" onsubmit="return addEventCheck();" action="./authenticate8">
+        <logout>
+
+            <enter>
+                <input type="submit" id="returnButton" value="LOG OUT" onclick="checkforemptyfields()">    <label id="status"></label>
+            </enter>
+
+
+        </logout>
+
+    </form>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+</body>
+</html>
+

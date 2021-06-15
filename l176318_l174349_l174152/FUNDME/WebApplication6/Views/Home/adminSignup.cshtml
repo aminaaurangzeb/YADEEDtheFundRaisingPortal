@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="~/Scripts/checkfields.js">
+    </script>
+    <link rel="stylesheet" type="text/css" href="~/Content/StyleSheet.css"/>
+    <meta name="viewport" content="width=device-width" />
+    <title>SignUp</title>
+</head>
+<body>
+    <!-- inline CSS on div tag;  external CSS on text boxes;-->
+    <heading2>Enter Your Sign Up Details </heading2>
+
+    <form method="post" onsubmit="return checkaddadmin();" action="./authenticate17">
+        <fieldset class="outerrec">
+            <div class="inputlabel" id="f">
+                <br />
+                
+                <label> Email:</label> <br /> <input name="Email" type="text" id="EmailField"> </input>
+                <br />
+                <br />
+                <label> CNIC:</label> <br /> <input name="cnic" type="text" id="cnicField"> </input>
+                <br />
+                <br />
+                <label> Password:</label><br /><input name="Password" type="password" id="PasswordField"> </input>
+                <br />
+                <br />
+               
+                <label> Position:</label> <br />
+                <enter>
+                    <select name="Position">
+
+                        <option value="manager">MANAGER</option>
+                        <option value="accountant">ACCOUNTANT</option>
+                        <option value="analysts">DATA ANALYSTS</option>
+                    </select>
+                </enter>
+                <br />
+                <br />
+               
+            </div>
+            <enter>
+                <input type="submit" id="loginButton" value="SIGN UP" /> <label id="status"></label>
+            </enter>
+            <br />
+            <br />
+        </fieldset>
+    </form>
+    <form method="post" onsubmit="return checkforemptyfields();" action="./authenticate12">
+        <logout>
+
+            <enter>
+                <input type="submit" id="returnButton" value="RETURN" onclick="checkforemptyfields()">    <label id="status"></label>
+            </enter>
+
+
+        </logout>
+
+    </form>
+    <br />
+    <br />
+    <br />
+    <br />
+</body>
+</html>
+

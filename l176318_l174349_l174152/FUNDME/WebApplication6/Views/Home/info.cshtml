@@ -1,0 +1,58 @@
+﻿@using WebApplication6.Models;
+@model User
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    @*<script src="~/js/checkfields.js">*@
+    </script>
+    <meta name="viewport" content="width=device-width" />
+
+    <title>info</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/StyleSheet.css"/>
+</head>
+<body>
+    <img src="~/Content/2l.png" />   <!-- inline CSS on div tag;  external CSS on text boxes;-->
+    <heading3> Welcome @Model.name to your account at YADEED </heading3>
+    
+    <br />
+    <br />
+    <br />
+    <br />
+    <form method="post" onsubmit="return checkForFieldsSignIn();" action="./authenticate5">
+        <fieldset class="outerrec1">
+
+            <div class="inputlabel" id="f">
+                <br />
+                CNIC :@Model.cnic
+                <br />
+                PHONE NUMBER: @Model.phoneno
+                <br />
+                EMAIL: @Model.email
+                <br />
+                <enter>
+                    <input type="submit" id="returnButton" value="RETURN" onclick="checkforemptyfields()">    <label id="status"></label>
+                </enter>
+                <br />
+                <br />
+
+            </div>
+
+        </fieldset>
+    </form>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+ 
+</body>
+</html>
+

@@ -1,0 +1,78 @@
+﻿
+
+@using WebApplication6.Models;
+
+@model List<User>
+
+<html>
+<head>
+    <script src="~/js/checkfields.js">
+    </script>
+    <meta name="viewport" content="width=device-width" />
+    <title>signin</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/StyleSheet.css" />
+</head>
+<body>
+    <br />
+    <heading2>REMOVE A USER HERE</heading2>
+    <div>
+        <form method="post" onsubmit="return addEventCheck();" action="./authenticate16">
+            <fieldset class="outerrec">
+                <div class="inputlabel" id="f">
+                    <br />
+                    <label> Email:</label> <br />
+                    <enter>
+                        <select name="email">
+                            @foreach (User U in Model)
+
+                            {
+                                <option value="@U.email">@U.email</option>
+                            }
+
+                        </select>
+                    </enter>
+                    <br />
+                    <br />
+
+                </div>
+                <enter>
+                    <input type="submit" id="loginButton" value="Remove" /> <label id="status"></label>
+                </enter>
+                <br />
+                <br />
+            </fieldset>
+        </form>
+
+    </div>
+    <form method="post" onsubmit="return checkForFieldsSignIn();" action="./authenticate12">
+        <logout>
+
+            <enter>
+                <input type="submit" id="returnButton" value="RETURN" onclick="checkforemptyfields()">    <label id="status"></label>
+            </enter>
+
+
+        </logout>
+
+    </form>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+
+</body>
+</html>
+

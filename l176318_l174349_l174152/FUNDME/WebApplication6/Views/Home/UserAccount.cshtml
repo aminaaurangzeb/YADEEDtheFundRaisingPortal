@@ -1,0 +1,113 @@
+﻿@using WebApplication6.Models;
+@model User
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="~/js/checkfields.js">
+    </script>
+    <meta name="viewport" content="width=device-width" />
+
+    <title>signin</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/StyleSheet.css"/>
+</head>
+<body>
+    <img src="~/Content/2l.png">    <!-- inline CSS on div tag;  external CSS on text boxes;-->
+    <heading3> Welcome @Model.name to your account at YADEED </heading3>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <fieldset class="outerrec1">
+
+        <div class="inputlabel" id="f">
+            TO CHECK USER INFO:
+            <br />
+            <a href="../../Home/info"> INFORMATION</a>
+
+            <br />
+            <br />
+            TO DONATE:
+            <br />
+            <a href="../../Home/donate"> DONATE</a>
+            <br />
+            <br />
+            TO VOLUNTEER:
+            <br />
+            <a href="../../Home/volunteer"> VOLUNTEER</a>
+            <br />
+            <br />
+            TO CHECK PREVIOUS DONATE HISTORY:
+            <br />
+            <a href="../../Home/donationHistory"> DONATIONS</a>
+            <br />
+            <br />
+            TO CHECK PREVIOUS VOLUNTEER HISTORY:
+            <br />
+            <a href="../../Home/volunteerHistory"> VOLUNTEERING</a>
+            <br />
+            <br />
+            TO VIEW HEALTH CASES:
+            <br />
+            <a href="../../Home/viewHealth"> HEALTH CASES</a>
+            <br />
+            <br />
+            TO VIEW EDUCATIONAL CASES:
+            <br />
+            <a href="../../Home/viewedu"> EDUCATIONAL CASES</a>
+            <br />
+            <br />
+
+            TO VIEW UPCOMING EVENTS:
+            <br />
+            <a href="../../Home/upcomingEvent"> UPCOMING EVENTS</a>
+            <br />
+            <br />
+        </div>
+
+    </fieldset>
+
+    <fieldset class="outerrec2">
+        TO REGISTER AS DONOR:
+        <br />
+        <a href="../../Home/registerasdonor"> REGISTER HERE</a>
+        <br />
+        <br />
+        TO REPORT A CASE:
+        <br />
+        <a href="../../Home/reportCase"> REPORT CASE</a>
+        <br />
+        <br />
+        TO REQUEST A VISIT:
+        <br />
+        <a href="../../Home/requestVisit"> REQUEST VISIT</a>
+        <br />
+        <br />
+
+    </fieldset>
+    <form method="post" onsubmit="return checkforemptyfields();" action="./authenticate8">
+        <logout>
+
+            <enter>
+                <input type="submit" id="returnButton" value="LOG OUT" onclick="checkforemptyfields()">    <label id="status"></label>
+            </enter>
+
+
+        </logout>
+
+    </form>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+
+</body>
+</html>
+

@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="~/Scripts/checkfields.js">
+    </script>
+    <meta name="viewport" content="width=device-width" />
+    <title>signin</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/StyleSheet.css"/>
+</head>
+<body>
+
+    <!-- inline CSS on div tag;  external CSS on text boxes;-->
+
+    <heading2> Enter Your Sign In Details </heading2>
+
+    <form method="post" onsubmit="return checkForFieldsSignIn();" action="./authenticate">
+        <fieldset class="outerrec">
+
+            <div class="inputlabel" id="f">
+                <br />
+                <label> Email:</label> <br /> <input type="text" id="EmailField" name="Email">
+                <br />
+                <br />
+                <label> Password:</label> <br /> <input name="Password" type="password" id="PasswordField"> </input>
+                <br />
+                <br />
+            </div>
+            <enter>
+                <input type="submit" id="loginButton" value="SIGN IN" onclick="checkforemptyfields()">    <label id="status"></label>
+
+            </enter>
+        </fieldset>
+    </form>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+</body>
+</html>
+

@@ -1,0 +1,76 @@
+﻿@using WebApplication6.Models;
+
+@model List<cases>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="~/Scripts/checkfields.js">
+    </script>
+    <meta name="viewport" content="width=device-width" />
+    <title>donate</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/StyleSheet.css"/>
+</head>
+<body>
+
+    <!-- inline CSS on div tag;  external CSS on text boxes;-->
+
+    <heading2> ENTER YOUR DETAILS </heading2>
+
+    <form method="post" onsubmit="return checkdonate();" action="./authenticate11">
+        <fieldset class="outerrec">
+
+            <div class="inputlabel" id="f">
+                <br />
+
+                <label> Case Name:</label> <br />
+                <enter>
+                    <select name="casename">
+                        @foreach (cases C in Model)
+
+                        {
+                            <option value="@C.name">@C.name</option>
+                        }
+
+                    </select>
+                    <br />
+                    <br />
+                    </enter>
+                    <label> Amount:</label> <br /> <input name="amount" type="text" id="amountField"> </input>
+                    <br />
+                    <br />
+            </div>
+            <enter>
+                <input type="submit" id="donate" value="DONATE" onclick="checkdonate()">    <label id="status"></label>
+
+            </enter>
+        </fieldset>
+    </form>
+    <br />
+    <form method="post" onsubmit="return checkforemptyfields();" action="./authenticate5">
+        <logout>
+
+            <enter>
+                <input type="submit" id="returnButton" value="RETURN" onclick="checkforemptyfields()">    <label id="status"></label>
+            </enter>
+
+
+        </logout>
+
+    </form>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+</body>
+</html>
+

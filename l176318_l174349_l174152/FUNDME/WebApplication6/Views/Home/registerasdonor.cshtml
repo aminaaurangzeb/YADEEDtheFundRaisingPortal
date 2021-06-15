@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="~/Scripts/checkfields.js">
+    </script>
+    <meta name="viewport" content="width=device-width" />
+    <title>signin</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/StyleSheet.css"/>
+</head>
+<body>
+
+    <!-- inline CSS on div tag;  external CSS on text boxes;-->
+
+    <heading2> ENTER YOUR DETAILS </heading2>
+
+    <form method="post" onsubmit="return checkdonorregister();" action="./authenticate9">
+        <fieldset class="outerrec">
+
+            <div class="inputlabel" id="f">
+                <br />
+                <label> Account number:</label> <br /> <input type="text" id="accField" name="accno">
+                <br />
+                <br />
+                <label> Visiting address:</label> <br /> <input name="visitingadd" type="text" id="VAField"> </input>
+                <br />
+                <br />
+            </div>
+            <enter>
+                <input type="submit" id="loginButton" value="REGISTER" onclick="checkdonorregister()">    <label id="status"></label>
+
+            </enter>
+        </fieldset>
+    </form>
+    <br />
+    <form method="post" onsubmit="return checkForFieldsSignIn();" action="./authenticate5">
+        <logout>
+
+            <enter>
+                <input type="submit" id="returnButton" value="RETURN" onclick="checkforemptyfields()">    <label id="status"></label>
+            </enter>
+
+
+        </logout>
+
+    </form>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+</body>
+</html>
+

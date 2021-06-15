@@ -1,0 +1,67 @@
+﻿@using WebApplication6.Models;
+@model List<myevent>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="~/js/checkfields.js">
+    </script>
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Volunteer History</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/StyleSheet.css"/>
+</head>
+<body>
+    <img src="~/Content/2l.png">
+    <heading3> Your Volunteer History at YADEED </heading3>
+
+    <br />
+    <br />
+    <br />
+    <styling1>
+        <table border="1">
+            <thead><tr> <th>Event Id  </th> <th>Name  </th> <th>Date  </th> <th>Category</th> <th>Link</th></tr> </thead>
+            @foreach (myevent d in Model)
+            {
+                <tr>
+                    <td>@d.eventid</td>
+                    <td>@d.name</td>
+                    <td>@d.date</td>
+                    <td>@d.category</td>
+                    <td>@d.link</td>
+                </tr>
+            }
+        </table>
+    </styling1>
+    <br />
+    <form method="post" onsubmit="return checkForFieldsSignIn();" action="./authenticate5">
+        <logout>
+
+            <enter>
+                <input type="submit" id="returnButton" value="RETURN" onclick="checkforemptyfields()">    <label id="status"></label>
+            </enter>
+
+
+        </logout>
+
+    </form>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+</body>
+</html>
+

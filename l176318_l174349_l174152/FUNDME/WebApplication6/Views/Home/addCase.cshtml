@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="~/Scripts/checkfields.js">
+    </script>
+    <link rel="stylesheet" type="text/css" href="~/Content/StyleSheet.css"/>
+    <meta name="viewport" content="width=device-width" />
+    <title>SignUp</title>
+</head>
+<body>
+    <!-- inline CSS on div tag;  external CSS on text boxes;-->
+    <heading2>Enter Case Details </heading2>
+
+    <form method="post" onsubmit="return checkaddCase();" action="./authenticate4">
+        <fieldset class="outerrec">
+            <div class="inputlabel" id="f">
+                <br />
+                <label> Case Id:</label>
+                <br />
+                <input name="id" type="number" id="idField" /> </input>
+                <br />
+                <br />
+                <label> Case Name:</label> <br /> <input name="name" type="text" id="nameField"> </input>
+                <br />
+                <br />
+                <label> Category:</label> <br />
+                <enter>
+                    <select name="category">
+
+                        <option value="health">HEALTH</option>
+                        <option value="education">EDUCATION</option>
+                    </select>
+                </enter>
+                <br />
+                <br />
+                <label> Target :</label><br /> <input name="target" type="number" id="targetField"> </input>
+                <br />
+                <br />
+                <label> Link To Page:</label><br /><input name="link" type="text" id="linkField"> </input>
+                <br />
+                <br />
+
+            </div>
+            <enter>
+            <input type="submit" id="loginButton" value="ADD" /> <label id="status"></label>
+                </enter>
+            <br />
+            <br />
+        </fieldset>
+    </form>
+    <form method="post" onsubmit="return checkforemptyfields();" action="./authenticate12">
+        <logout>
+
+            <enter>
+                <input type="submit" id="returnButton" value="RETURN" onclick="checkforemptyfields()">    <label id="status"></label>
+            </enter>
+
+
+        </logout>
+
+    </form>
+    <br />
+    <br />
+    <br />
+    <br />
+</body>
+</html>
+
+
+

@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+@using WebApplication6.Models;
+
+@model List<myevent>
+
+<html>
+<head>
+    @*<script src="~/js/checkfields.js">*@
+    </script>
+    <meta name="viewport" content="width=device-width" />
+    <title>signin</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/StyleSheet.css"/>
+</head>
+<body>
+
+    <!-- inline CSS on div tag;  external CSS on text boxes;-->
+
+    <heading2> ENTER YOUR DETAILS </heading2>
+
+    <form method="post" onsubmit="return checkForFieldsSignIn();" action="./authenticate10">
+        <fieldset class="outerrec">
+
+            <div class="inputlabel" id="f">
+                <br />
+                <label> Event Name:</label> <br />
+                <select name="eventname">
+                    @foreach (myevent E in Model)
+
+                    {
+                        <option value="@E.name">@E.name</option>
+                    }
+
+                </select>
+                <br />
+                <br />
+                <label> Position:</label> <br />
+                <select name="position">
+                    <option value="Front Desk">Front desk</option>
+                    <option value="Stall">Stall</option>
+                    <option value="Decor">Decor</option>
+                    <option value="Ground ">Ground</option>
+                    <option value="Ticket Booth">TicketBooth</option>
+
+                </select>
+                <br />
+                <br />
+            </div>
+            <enter>
+                <input type="submit" id="volunteer" value="VOLUNTEER" onclick="checkforemptyfields()">    <label id="status"></label>
+
+            </enter>
+        </fieldset>
+    </form>
+    <br />
+    <form method="post" onsubmit="return checkForFieldsSignIn();" action="./authenticate5">
+        <logout>
+
+            <enter>
+                <input type="submit" id="returnButton" value="RETURN" onclick="checkforemptyfields()">    <label id="status"></label>
+            </enter>
+
+
+        </logout>
+
+    </form>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+</body>
+</html>
+

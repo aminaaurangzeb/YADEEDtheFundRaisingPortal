@@ -1,0 +1,70 @@
+﻿
+<!DOCTYPE html>
+
+@using WebApplication6.Models;
+
+@model List<cases>
+<html>
+<head>
+    <script src="~/js/checkfields.js">
+    </script>
+    <meta name="viewport" content="width=device-width" />
+    <title>signin</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/StyleSheet.css" />
+</head>
+<body>
+    <br />
+    <heading2>VIEW ALL HEALTH CASES</heading2>
+    <div>
+        <styling>
+
+            <table border="1">
+                <thead><tr><td>Case ID</td> <td>Name</td> <td>Catergory</td><td>Target Amount</td></tr></thead>
+
+                @foreach (cases C in Model)
+                {
+                    <tr>
+                        <td>@C.id</td>
+                        <td>@C.name</td>
+                        <td>@C.category</td>
+                        <td>@C.target</td>
+                    </tr>
+                    <br />
+                    <br />
+                }
+
+            </table>
+        </styling>
+        
+    </div>
+    <form method="post" onsubmit="return checkForFieldsSignIn();" action="./authenticate5">
+        <logout>
+
+            <enter>
+                <input type="submit" id="returnButton" value="RETURN" onclick="checkforemptyfields()">    <label id="status"></label>
+            </enter>
+
+
+        </logout>
+
+    </form>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+
+</body>
+</html>
